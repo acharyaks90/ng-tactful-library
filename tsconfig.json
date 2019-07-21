@@ -17,6 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+    
+      "ng-tactful-lib": [
+        "dist/ng-tactful-lib"
+      ],
+      "ng-tactful-lib/*": [
+        "dist/ng-tactful-lib/*"
+      ]
+    }
   }
 }

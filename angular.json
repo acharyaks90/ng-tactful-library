@@ -134,6 +134,76 @@
           }
         }
       }
+    },
+    "ngtactful": {
+      "root": "projects/ngtactful",
+      "sourceRoot": "projects/ngtactful/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngtactful/tsconfig.lib.json",
+            "project": "projects/ngtactful/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngtactful/src/test.ts",
+            "tsConfig": "projects/ngtactful/tsconfig.spec.json",
+            "karmaConfig": "projects/ngtactful/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngtactful/tsconfig.lib.json",
+              "projects/ngtactful/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-tactful-lib": {
+      "root": "projects/ng-tactful-lib",
+      "sourceRoot": "projects/ng-tactful-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-tactful-lib/tsconfig.lib.json",
+            "project": "projects/ng-tactful-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-tactful-lib/src/test.ts",
+            "tsConfig": "projects/ng-tactful-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-tactful-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-tactful-lib/tsconfig.lib.json",
+              "projects/ng-tactful-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "myproject"
