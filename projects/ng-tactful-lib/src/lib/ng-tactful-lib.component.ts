@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'lib-ng-tactful-lib',
   template: `
     <p>
-      ng-tactful-lib works!
+      Welcome Component in ng-tactful-lib
     </p>
   `,
   styles: []
