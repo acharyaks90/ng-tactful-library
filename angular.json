@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/myproject",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -54,6 +55,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -135,41 +140,6 @@
         }
       }
     },
-    "ngtactful": {
-      "root": "projects/ngtactful",
-      "sourceRoot": "projects/ngtactful/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ngtactful/tsconfig.lib.json",
-            "project": "projects/ngtactful/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngtactful/src/test.ts",
-            "tsConfig": "projects/ngtactful/tsconfig.spec.json",
-            "karmaConfig": "projects/ngtactful/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngtactful/tsconfig.lib.json",
-              "projects/ngtactful/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "ng-tactful-lib": {
       "root": "projects/ng-tactful-lib",
       "sourceRoot": "projects/ng-tactful-lib/src",
@@ -182,7 +152,12 @@
             "tsConfig": "projects/ng-tactful-lib/tsconfig.lib.json",
             "project": "projects/ng-tactful-lib/ng-package.json"
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-tactful-lib/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
