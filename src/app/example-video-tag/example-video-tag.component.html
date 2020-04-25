@@ -1,2 +1,5 @@
 <p>example-video-tag works!</p>
 <ngtactful-video-tag  [download_url]="videoUrl"  ></ngtactful-video-tag>
+
+<input type="text" [(ngModel)]="marker" name="marker" id="marker">
+<button (click)="addMarkers()" >Add markers </button>

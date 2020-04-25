@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { SecondLetterCapitalComponent } from './second-letter-capital/second-let
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgTactfulLibModule
   ],

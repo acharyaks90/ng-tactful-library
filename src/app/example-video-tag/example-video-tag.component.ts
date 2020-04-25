@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-//import { NgTactFulVideoTagComponent } from 'ng-tactful-lib/public-api';
 import { NgTactFulVideoTagComponent } from 'ng-tactful-lib';
 
 @Component({
@@ -10,27 +9,66 @@ import { NgTactFulVideoTagComponent } from 'ng-tactful-lib';
 export class ExampleVideoTagComponent implements OnInit {
   @ViewChild(NgTactFulVideoTagComponent)
   private videoplayer: NgTactFulVideoTagComponent;
+  marker:string;
   marks = [{
     timing:'100',
-    taggingtexts:[{name:'test'},{name:'data'}] 
+    markingTexts:[{name:'test'},{name:'data'}] 
   },
   {
     timing:'300',
-    taggingtexts:[{name:'test'}] 
+    markingTexts:[{name:'test'}] 
   },
   {
     timing:'500',
-    taggingtexts:[{name:'test'}] 
+    markingTexts:[{name:'test'}] 
   }];
   constructor() { }
+
   videoUrl = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
   ngOnInit(): void {
 
-   // this.videoplayer.onAddMarkers(this.tags)
   }
 
   ngAfterViewInit(){
     this.videoplayer.onAddMarkersOnLoad (this.marks)
   }
+
+  addMarkers(){
+    
+  let  time = this.videoplayer.gettingTimeAndPausePlayer();
+
+    let tagIndex = this.marks.findIndex(mark => {
+      return parseInt(mark.timing) == time;
+    });
+
+    if (tagIndex !== -1) {
+
+      this.marks[tagIndex].markingTexts.push({name:this.marker})
+      
+    } else {
+      this.marks.push({timing:time.toString() ,markingTexts:[{name:this.marker}]})
+    }
+
+    this.sortMarkers();
+
+    this.videoplayer.onAddMarkers(this.marks);
+    this.marker = ''
+  }
+
+
+  
+
+    /**
+  * sortMarkers is a function.
+  * @description : Sort the tags data according to time
+  *
+  */
+ sortMarkers() {
+  this.marks.sort((a, b) => {
+    return parseInt(a.timing) - parseInt(b.timing);
+  });
+}
+
+  
 
 }

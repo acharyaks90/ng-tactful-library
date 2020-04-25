@@ -2,7 +2,7 @@ import { Component, OnInit,ViewEncapsulation, Input } from '@angular/core';
 import videojs from 'video.js';
 import  {VideoJsMarkerPlugin}  from './video-js-marker-plugin';
 import { DatePipe } from '@angular/common';
-import { TaggingText } from './tags'
+import { MarkingText } from './markers'
 
 @Component({
   selector: 'ngtactful-video-tag',
@@ -92,8 +92,8 @@ export class NgTactFulVideoTagComponent implements OnInit {
       this.player.markers().removeAll();
       if(addingMarkers && addingMarkers.length){
         addingMarkers.map(mark=>{
-           // making function and dynamically adding tags with feature names
-          this.player.markers().add( [{time: mark.timing, html: this.makeMarkerHtml(mark.taggingtexts) }]);
+           // making function and dynamically adding markers with name
+          this.player.markers().add( [{time: mark.timing, html: this.makeMarkerHtml(mark.markingTexts) }]);
         })
       }
  
@@ -109,8 +109,8 @@ export class NgTactFulVideoTagComponent implements OnInit {
     this.player.on('loadedmetadata',()=>{
       if(addingMarkers && addingMarkers.length){
         addingMarkers.map(mark=>{
-           // making function and dynamically adding tags with feature names
-          this.player.markers().add( [{time: mark.timing, html: this.makeMarkerHtml(mark.taggingtexts) }]);
+           // making function and dynamically adding markers
+          this.player.markers().add( [{time: mark.timing, html: this.makeMarkerHtml(mark.markingTexts) }]);
         })
       }
     })
@@ -123,7 +123,7 @@ export class NgTactFulVideoTagComponent implements OnInit {
 * removeMarker is a function.
 * @description : removing the marker
 * @param {time} time in timeline
-* @param {index} index of tag
+* @param {index} index of marker
 * 
 **/
   removeMarker(time,index?){
@@ -160,15 +160,15 @@ export class NgTactFulVideoTagComponent implements OnInit {
   /**
 * makeMarkerHtml is a function.
 * @description : make html
-* @param {feature array} list of features
+* @param {marking array} list of markers
 * @returns string html
 **/
 
- makeMarkerHtml(taggingtexts:TaggingText[]):string{
+ makeMarkerHtml(markingTexts:MarkingText[]):string{
   let str = '<ul>'
 
-  taggingtexts.map(tag=>{
-    str += `<li>${tag.name}</li>`
+  markingTexts.map(mark=>{
+    str += `<li>${mark.name}</li>`
   })
   
   return str + '</ul>'
