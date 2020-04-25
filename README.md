@@ -33,7 +33,7 @@ export class AppModule { }
 
 ## Uses  example of VideoJs marking 
 
-![Image description]()
+![Image description](https://raw.githubusercontent.com/acharyaks90/ng-tactful-library/master/src/assets/video_marking.png)
 
 # Include videojs in style.css 
 ```css
