@@ -8,7 +8,8 @@ import { NgTactfulLibModule } from 'ng-tactful-lib';
 import { HomeComponent } from './home/home.component';
 import { MyComponent } from './my/my.component';
 import { StaticComComponent } from './static-com/static-com.component';
-import { NotFoundComponent } from './not-found/not-found.component'
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SecondLetterCapitalComponent } from './second-letter-capital/second-letter-capital.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component'
     HomeComponent,
     MyComponent,
     StaticComComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SecondLetterCapitalComponent
   ],
   imports: [
     BrowserModule,
