@@ -1,8 +1,8 @@
 {
   "name": "ng-tactful-lib",
   "version": "1.0.0",
-  "description": "This is a Angular Tactful generic reusable Library published to npm.",
-  "keywords" :["angular","angular-orderby", "angular-pipe", "video-makrker",
+  "description": "Ng-Tactful is generic reusable Angular Library for common components.",
+  "keywords" :["angular","angular-orderby", "angular-pipe", "video-marker",
      "videojs -markers", "videojs", "video tagging", "video tag"," video marks",
       "angular-second letter capital"],
   "license" : "MIT",
