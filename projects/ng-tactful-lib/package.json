@@ -1,9 +1,15 @@
 {
   "name": "ng-tactful-lib",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "This is a Angular Tactful generic reusable Library published to npm.",
-  "keywords" :["Angular","Library", "Filter", "Nested List"],
-  "license" : "SEE LICENSE IN LICENSE",
+  "keywords" :["angular","angular-orderby", "angular-pipe", "video-makrker",
+     "videojs -markers", "videojs", "video tagging", "video tag"," video marks",
+      "angular-second letter capital"],
+  "license" : "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/acharyaks90/ng-tactful-library/issues"
+  },
   "repository": {
     "type" : "git",
     "url" : "https://github.com/acharyaks90/ng-tactful-library"
