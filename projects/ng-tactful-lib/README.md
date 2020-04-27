@@ -7,6 +7,20 @@
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 This library was updated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1
 
+## Install lib and dependencies 
+
+Install lib
+
+npm i ng-tactful-lib --save 
+or
+yarn add ng-tactful-lib
+
+and install video.js
+
+npm i video.js --save
+or
+
+yarn add video.js
 
 
 ## Uses  example of pipe for Capital Second letter

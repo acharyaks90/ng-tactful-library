@@ -1,6 +1,6 @@
 {
   "name": "ng-tactful-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ng-Tactful is generic reusable Angular Library for common components.",
   "keywords" :["angular","angular-orderby", "angular-pipe", "video-marker",
      "videojs -markers", "videojs", "video tagging", "video tag"," video marks",
