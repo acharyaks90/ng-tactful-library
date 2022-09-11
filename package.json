@@ -14,7 +14,6 @@
     "copy:readme": "cpx README.md dist/ng-tactful-lib",
     "copy:changelog": "cpx CHANGELOG.md dist/acharyaks90/ng-tactful-lib",
     "copy:license": "cpx LICENSE dist/acharyaks90/ng-tactful-lib"
-
   },
   "private": true,
   "dependencies": {
