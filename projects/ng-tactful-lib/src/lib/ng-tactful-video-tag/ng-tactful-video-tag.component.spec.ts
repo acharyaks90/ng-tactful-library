@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BuilderVideoTagComponent } from './builder-video-tag.component';
 
@@ -6,7 +6,7 @@ describe('BuilderVideoTagComponent', () => {
   let component: BuilderVideoTagComponent;
   let fixture: ComponentFixture<BuilderVideoTagComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ BuilderVideoTagComponent ]
     })
